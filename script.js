@@ -1,9 +1,22 @@
 function playRound(playerSelection, computerSelection) {
-    console.log("Player:"+playerSelection)
-    console.log("Computer:"+computerSelection)
+    //console.log("Player:"+playerSelection);
+    //console.log("Computer:"+computerSelection);
     if (playerSelection == computerSelection) {
-        console.log("Tie!")
+        return "T"
+    } else if (playerSelection == "rock") {
+        if (computerSelection == "paper") {
+            return "L"
+        }
+    } else if (playerSelection == "paper") {
+        if (computerSelection == "scissors") {
+            return "L"
+        }
+    } else if (playerSelection == "scissors") {
+        if (computerSelection == "rock") {
+            return "L"
+        }
     }
+    return "W"
 }
 
 function computerPlay() {
@@ -26,7 +39,7 @@ function validatePlay(play) {
 }
 function game() {
     for (let i = 0; i < 2; i++) { // play 2 rounds for now
-        playRound(playerPick(), computerPlay());
+        console.log(playRound(playerPick(), computerPlay()));
     }
 }
 
