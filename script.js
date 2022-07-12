@@ -1,3 +1,8 @@
+let scoreWin = 0;
+let scoreLoss = 0;
+let scoreTie = 0;
+const validPlays = ["rock", "paper", "scissors"]
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "T"
@@ -43,16 +48,16 @@ function game() {
                 break;
             case 'L': 
                 console.log("LOST")
+                scoreLoss += 1;
                 break;
-            case 'T': console.log("TIE")
+            case 'T': 
+                console.log("TIE")
+                scoreTie += 1;
                 break;
         }
         
     }
-    console.log("Wins:"+scoreWin)
+    console.log("Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie)
 }
-
-const validPlays = ["rock", "paper", "scissors"]
-let scoreWin = 0;
 
 game();
