@@ -1,5 +1,8 @@
 function playRound(playerSelection, computerSelection) {
-    
+
+}
+
+function computerPlay() {
 }
 
 const playerSelection = "rock";
