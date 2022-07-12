@@ -9,18 +9,18 @@ function computerPlay() {
 function playerPick() {
     var isvalidpick = false
     while (isvalidpick != true) {
-        let pick = prompt("Your selection:")
+        let pick = prompt("Your selection:").toLocaleLowerCase()
         var isvalidpick = validatePlay(pick)
     }
 }
 function validatePlay(play) {
-    if (validPlays.indexOf(play) >= 0) {
+    if (validPlays.indexOf(play) >= 0) { // Check if player's pick is valid
         return true
     }
     return false
 }
 
-const validPlays = ["Rock", "Paper", "Scissors"]
+const validPlays = ["rock", "paper", "scissors"]
 
 const playerSelection = playerPick();
 const computerSelection = computerPlay();
