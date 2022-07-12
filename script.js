@@ -33,11 +33,17 @@ function validatePlay(play) {
 function game() {
     for (let i = 0; i < 2; i++) { // play 2 rounds for now
         let result = playRound(playerPick(), computerPlay());
-        console.log(result)
+        switch (result) {
+            case 'W': console.log("WIN")
+            break;
+            case 'L': console.log("LOST")
+            break;
+            case 'T': console.log("TIE")
+            break;
+        }
+        
     }
 }
 
 const validPlays = ["rock", "paper", "scissors"]
-//console.log(playRound(playerSelection, computerSelection));
-//console.log(computerPlay())
 game();
