@@ -16,6 +16,7 @@ function computerPlay() {
     let randNum = Math.floor(Math.random()*3)
     return validPlays[randNum]
 }
+
 function playerPick() {
     var isvalidpick = false
     while (isvalidpick != true) {
@@ -24,26 +25,34 @@ function playerPick() {
     }
     return pick
 }
+
 function validatePlay(play) {
     if (validPlays.indexOf(play) >= 0) { // Check if player's pick is valid
         return true
     }
     return false
 }
+
 function game() {
-    for (let i = 0; i < 2; i++) { // play 2 rounds for now
+    for (let i = 0; i < 3; i++) {
         let result = playRound(playerPick(), computerPlay());
         switch (result) {
-            case 'W': console.log("WIN")
-            break;
-            case 'L': console.log("LOST")
-            break;
+            case 'W': 
+                console.log("WIN")
+                scoreWin += 1;
+                break;
+            case 'L': 
+                console.log("LOST")
+                break;
             case 'T': console.log("TIE")
-            break;
+                break;
         }
         
     }
+    console.log("Wins:"+scoreWin)
 }
 
 const validPlays = ["rock", "paper", "scissors"]
+let scoreWin = 0;
+
 game();
