@@ -1,5 +1,9 @@
 function playRound(playerSelection, computerSelection) {
-    //play round stuff
+    console.log("Player:"+playerSelection)
+    console.log("Computer:"+computerSelection)
+    if (playerSelection == computerSelection) {
+        console.log("Tie!")
+    }
 }
 
 function computerPlay() {
@@ -9,9 +13,10 @@ function computerPlay() {
 function playerPick() {
     var isvalidpick = false
     while (isvalidpick != true) {
-        let pick = prompt("Your selection:").toLocaleLowerCase()
+        var pick = prompt("Your selection:").toLocaleLowerCase()
         var isvalidpick = validatePlay(pick)
     }
+    return pick
 }
 function validatePlay(play) {
     if (validPlays.indexOf(play) >= 0) { // Check if player's pick is valid
@@ -19,10 +24,13 @@ function validatePlay(play) {
     }
     return false
 }
+function game() {
+    for (let i = 0; i < 2; i++) { // play 2 rounds for now
+        playRound(playerPick(), computerPlay());
+    }
+}
 
 const validPlays = ["rock", "paper", "scissors"]
-
-const playerSelection = playerPick();
-const computerSelection = computerPlay();
 //console.log(playRound(playerSelection, computerSelection));
-console.log(computerPlay())
+//console.log(computerPlay())
+game();
