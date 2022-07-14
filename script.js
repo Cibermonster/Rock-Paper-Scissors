@@ -67,7 +67,7 @@ function game(id) {
     }
 
 
-    document.getElementById("score").innerHTML = "Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round;
+    document.getElementById("score2").innerHTML = "Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round;
 /*const container = document.querySelector('#results');
 
 const content = document.createElement('div');
@@ -75,7 +75,6 @@ content.classList.add('content');
 content.textContent = "Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round;
 
 container.appendChild(content);*/
-    console.log("Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round)
 }
 
 

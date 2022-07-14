@@ -1,3 +1,19 @@
-.body {
-    justify-content: center;
+body {
+    text-align: center;
+    color:white;
+    background-color: rgb(0, 23, 71);
+}
+#title {
+    font-weight: 900;
+    font-size: xx-large;
+}
+.results {
+    font-weight: 700;
+    font-size:medium;
+}
+.playButtons button {
+    background-color: aqua;
+}
+#score {
+    margin: 20px;
 }
