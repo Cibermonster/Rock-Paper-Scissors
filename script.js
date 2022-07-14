@@ -1,13 +1,16 @@
 let scoreWin = 0;
 let scoreLoss = 0;
 let scoreTie = 0;
+let round = 0;
+let totalRounds = 2;
+
 const validPlays = ["rock", "paper", "scissors"]
 
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
   button.addEventListener('click', () => {
-    alert(button.id);
+    game(button.id);
   });
 });
 
@@ -46,26 +49,30 @@ function validatePlay(play) {
     return false
 }
 
-function game() {
-    for (let i = 0; i < 3; i++) {
-        let result = playRound(playerPick(), computerPlay());
-        switch (result) {
-            case 'W': 
-                console.log("WIN")
-                scoreWin += 1;
-                break;
-            case 'L': 
-                console.log("LOST")
-                scoreLoss += 1;
-                break;
-            case 'T': 
-                console.log("TIE")
-                scoreTie += 1;
-                break;
-        }
-        
+function game(id) {
+    
+    let result = playRound(id, computerPlay());
+    switch (result) {
+        case 'W': 
+            console.log("WIN")
+            scoreWin += 1;
+            break;
+        case 'L': 
+            console.log("LOST")
+            scoreLoss += 1;
+            break;
+        case 'T': 
+            console.log("TIE")
+            scoreTie += 1;
+            break;
     }
-    console.log("Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie)
+    if (round >= totalRounds) {
+        // Game Over
+    } else {
+        round += 1;
+    }
+    
+    console.log("Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round)
 }
 
 //game();
