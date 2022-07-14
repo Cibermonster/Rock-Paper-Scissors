@@ -61,7 +61,7 @@ function game(id) {
             scoreLoss += 1;
             break;
         case 'T': 
-            document.getElementById("score").innerHTML = "You Tied!";
+            document.getElementById("score").innerHTML = "You tied!";
             scoreTie += 1;
             break;
     }
