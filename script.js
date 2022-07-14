@@ -3,6 +3,14 @@ let scoreLoss = 0;
 let scoreTie = 0;
 const validPlays = ["rock", "paper", "scissors"]
 
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    alert(button.id);
+  });
+});
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         return "T"
@@ -60,4 +68,4 @@ function game() {
     console.log("Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie)
 }
 
-game();
+//game();
