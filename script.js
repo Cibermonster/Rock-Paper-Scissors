@@ -2,7 +2,6 @@ let scoreWin = 0;
 let scoreLoss = 0;
 let scoreTie = 0;
 let round = 0;
-let totalRounds = 2;
 
 const validPlays = ["rock", "paper", "scissors"]
 
@@ -53,26 +52,30 @@ function game(id) {
     
     let result = playRound(id, computerPlay());
     switch (result) {
-        case 'W': 
-            console.log("WIN")
+        case 'W':
+            document.getElementById("score").innerHTML = "You won!";
             scoreWin += 1;
             break;
         case 'L': 
-            console.log("LOST")
+            document.getElementById("score").innerHTML = "You lost!";
             scoreLoss += 1;
             break;
         case 'T': 
-            console.log("TIE")
+            document.getElementById("score").innerHTML = "You Tied!";
             scoreTie += 1;
             break;
     }
-    if (round >= totalRounds) {
-        // Game Over
-    } else {
-        round += 1;
-    }
-    
+
+
+    document.getElementById("score").innerHTML = "Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round;
+/*const container = document.querySelector('#results');
+
+const content = document.createElement('div');
+content.classList.add('content');
+content.textContent = "Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round;
+
+container.appendChild(content);*/
     console.log("Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round)
 }
 
-//game();
+
