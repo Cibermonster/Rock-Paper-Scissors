@@ -14,6 +14,10 @@ buttons.forEach((button) => {
 });
 
 function playRound(playerSelection, computerSelection) {
+
+    document.getElementById("playerHand").innerHTML = '<img src="./img/'+playerSelection+'.png" />';
+    document.getElementById("computerHand").innerHTML = '<img src="./img/'+computerSelection+'.png" />';
+
     if (playerSelection == computerSelection) {
         return "T"
     } else if (playerSelection == "rock" && computerSelection == "paper") {
@@ -25,6 +29,7 @@ function playRound(playerSelection, computerSelection) {
     } else {
         return "W"
     }
+
 }
 
 function computerPlay() {
@@ -50,6 +55,7 @@ function validatePlay(play) {
 
 function game(id) {
     let result = playRound(id, computerPlay());
+    round += 1;
     switch (result) {
         case 'W':
             document.getElementById("score").innerHTML = "You won!";
@@ -64,9 +70,10 @@ function game(id) {
             scoreTie += 1;
             break;
     }
+    document.getElementById("round").innerHTML = "Round "+round;
 
-    document.getElementById("player").innerHTML = "Player: " + scoreWin;
-    document.getElementById("computer").innerHTML = "Computer: " + scoreLoss;
+    document.getElementById("playerscore").innerHTML = "Player: " + scoreWin;
+    document.getElementById("computerscore").innerHTML = "Computer: " + scoreLoss;
 /*const container = document.querySelector('#results');
 
 const content = document.createElement('div');

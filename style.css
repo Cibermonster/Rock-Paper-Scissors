@@ -29,10 +29,13 @@ body {
     justify-content: center;
 }
 .scoreboard div {
-    margin:50px;
+    margin:40px;
 }
 #score {
     font-size: x-large;
     font-weight: 700;
     margin: 20px;
+}
+.scoreboard img {
+    height:150px;
 }
