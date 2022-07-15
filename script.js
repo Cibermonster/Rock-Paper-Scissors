@@ -35,7 +35,7 @@ function computerPlay() {
 function playerPick() {
     /*var isvalidpick = false
     while (isvalidpick != true) {
-        var pick = prompt("Your selection:").toLocaleLowerCase()
+        var pick = prompt("Your selection:").toLocaleLowerCase() 
         var isvalidpick = validatePlay(pick)
     }*/
     return pick
