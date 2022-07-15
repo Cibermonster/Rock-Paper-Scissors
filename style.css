@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    color:white;
+    background-color: #0D1117;
+}
+.title {
+    font-weight: 900;
+    font-size: xx-large;
+    background-color: #161B22;
+    padding: 30px;
+}
+.body {
+    padding: 30px;
+}
+.results {
+    font-weight: 500;
+    font-size:medium;
+}
+.playButtons button {
+    background-color: transparent;
+    border-radius: 20px;
+    height:75px;
+    width: 100px;
+    color:aliceblue;
+    margin:15px;
+    font-weight: 900;
+}
+.scoreboard {
+    display: flex;
+    justify-content: center;
+}
+.scoreboard div {
+    margin:40px;
+}
+#score {
+    font-size: x-large;
+    font-weight: 700;
+    margin: 20px;
+}
+.scoreboard img {
+    height:150px;
+}

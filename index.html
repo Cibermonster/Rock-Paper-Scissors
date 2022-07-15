@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <p>Welcome</p>
+    <div class="title">Rock Paper Scissors</div>
+    <div class="body">
+        <div class="playButtons" id="gameButtons">
+            <button id="rock">Rock</button>
+            <button id="paper">Paper</button>
+            <button id="scissors">Scissors</button>
+        </div>
+        <div class="results">
+            <div id="score">Select a hand to play!</div>
+            <div id="round">First to 5 wins!</div>
+            <div class="scoreboard">
+                <div class="player">
+                    <div id="playerHand">
+                        <img src="./img/player.png" />
+                    </div>
+                    <div id="playerscore">Player: 0</div>
+                </div>
+                <div class="computer">
+                    <div id="computerHand">
+                        <img src="./img/computer.png" />
+                    </div>
+                    <div id="computerscore">Computer: 0</div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="footer">Copyright &copy; 2022 Ciber</div>
 </body>
 </html>
