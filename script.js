@@ -3,7 +3,7 @@ let scoreLoss = 0;
 let scoreTie = 0;
 let round = 0;
 
-const validPlays = ["rock", "paper", "scissors"]
+//const validPlays = ["rock", "paper", "scissors"]
 
 const buttons = document.querySelectorAll('button');
 
@@ -32,16 +32,16 @@ function computerPlay() {
     return validPlays[randNum]
 }
 
-function playerPick() {
-    /*var isvalidpick = false
+/*function playerPick() {
+    var isvalidpick = false
     while (isvalidpick != true) {
-        var pick = prompt("Your selection:").toLocaleLowerCase() 
+        var pick = prompt("Your selection:").toLocaleLowerCase()
         var isvalidpick = validatePlay(pick)
-    }*/
+    }
     return pick
 }
 
-/*function validatePlay(play) {
+function validatePlay(play) {
     if (validPlays.indexOf(play) >= 0) { // Check if player's pick is valid
         return true
     }
