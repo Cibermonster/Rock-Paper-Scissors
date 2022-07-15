@@ -2,7 +2,7 @@ let scoreWin = 0;
 let scoreLoss = 0;
 let scoreTie = 0;
 let round = 0;
-let scoreToWin = 1;
+let scoreToWin = 5;
 
 const validPlays = ["rock", "paper", "scissors"]
 const buttons = document.querySelectorAll('button');
@@ -55,8 +55,8 @@ function game(id) {
     document.getElementById("round").innerHTML = "Round "+round;
     document.getElementById("playerscore").innerHTML = "Player: " + scoreWin;
     document.getElementById("computerscore").innerHTML = "Computer: " + scoreLoss;
-    if (scoreToWin >= 1 || scoreToWin >= 1) {
-        document.getElementById("gameButtons").innerHTML = '<button id="reset">Play Again</button>';
+    if (scoreWin >= scoreToWin || scoreLoss >= scoreToWin) {
+        document.getElementById("gameButtons").innerHTML = '<button onClick="window.location.reload();">Play Again</button>';
 
     }
 }
