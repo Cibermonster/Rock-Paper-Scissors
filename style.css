@@ -23,6 +23,7 @@ body {
     width: 100px;
     color:aliceblue;
     margin:15px;
+    font-weight: 900;
 }
 .scoreboard {
     display: flex;
