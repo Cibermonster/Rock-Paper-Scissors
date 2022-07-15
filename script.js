@@ -2,9 +2,9 @@ let scoreWin = 0;
 let scoreLoss = 0;
 let scoreTie = 0;
 let round = 0;
+let scoreToWin = 1;
 
 const validPlays = ["rock", "paper", "scissors"]
-
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach((button) => {
@@ -53,9 +53,12 @@ function game(id) {
             break;
     }
     document.getElementById("round").innerHTML = "Round "+round;
-
     document.getElementById("playerscore").innerHTML = "Player: " + scoreWin;
     document.getElementById("computerscore").innerHTML = "Computer: " + scoreLoss;
+    if (scoreToWin >= 1 || scoreToWin >= 1) {
+        document.getElementById("gameButtons").innerHTML = '<button id="reset">Play Again</button>';
+
+    }
 }
 
 
