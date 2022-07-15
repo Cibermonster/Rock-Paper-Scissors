@@ -3,7 +3,7 @@ let scoreLoss = 0;
 let scoreTie = 0;
 let round = 0;
 
-//const validPlays = ["rock", "paper", "scissors"]
+const validPlays = ["rock", "paper", "scissors"]
 
 const buttons = document.querySelectorAll('button');
 
@@ -49,7 +49,6 @@ function validatePlay(play) {
 }*/
 
 function game(id) {
-    
     let result = playRound(id, computerPlay());
     switch (result) {
         case 'W':
@@ -66,8 +65,8 @@ function game(id) {
             break;
     }
 
-
-    document.getElementById("score2").innerHTML = "Wins: " + scoreWin + " Lost: " + scoreLoss + " Tied: " + scoreTie + " Rounds: " + round;
+    document.getElementById("player").innerHTML = "Player: " + scoreWin;
+    document.getElementById("computer").innerHTML = "Computer: " + scoreLoss;
 /*const container = document.querySelector('#results');
 
 const content = document.createElement('div');
